@@ -2,7 +2,7 @@ require("events").EventEmitter.defaultMaxListeners = Infinity;
 
 const express = require("express"),
     cookieParser = require('cookie-parser'),
-    cookieSession = require('cookie-session'),
+    session = require('express-session'),
     app = express(),
     cors = require("cors"),
     fs = require("fs"),
@@ -24,11 +24,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(cors());
-app.use(cookieParser());
-app.use(
-    cookieSession({
-      maxAge: 60 * 60 * 1000,
-      keys: [process.env.COOKIE_SECRET_KEY],
+ app.use(cookieParser());
+
+app.use( 
+    session({
+      secret: [process.env.COOKIE_SECRET_KEY],
+      resave: false,
+      saveUninitialized: true
     })
   );
 
