@@ -1,0 +1,32 @@
+{
+  "name": "authentication-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "platute.js",
+  "scripts": {
+    "start": "node platute.js",
+    "start:dev": "nodemon platute.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "chalk": "^2.4.2",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
+    "cron": "^1.8.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "faker": "^6.6.6",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^5.4.23",
+    "morgan": "^1.10.0",
+    "request-ip": "^2.1.3"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "nodemon": "^2.0.22"
+  }
+}
